@@ -1,10 +1,13 @@
 Onboard::Application.routes.draw do
 
-  # connect urls with the controller
-  resources :rooms
+# sign up users to the site
+resources :users
 
-  # homepage
-  root "rooms#index"
+# connect urls with the controller
+resources :rooms
+
+# homepage
+root "rooms#index"
 
 
 
