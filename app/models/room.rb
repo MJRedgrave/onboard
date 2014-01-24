@@ -2,6 +2,7 @@ class Room < ActiveRecord::Base
 
 	# assicoation
 	belongs_to :user
+	has_many :orders
 
 	# this is from the rubycoder.org site
 	geocoded_by :address

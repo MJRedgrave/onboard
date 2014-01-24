@@ -27,12 +27,12 @@
 
     <% if current_user.present? %>
 
-      <%= image_tag current_user.avator:(:thumbnail) %>
+
       <strong><%= current_user.name %></strong>
 
       <%= link_to "Dashboard", "#" %>
       <%= link_to "Add a room", new_room_path %>
-      <%= link_to "Orders", "#" %>
+      <%= link_to "Orders", orders_path %>
       <%= link_to "Log out", session_path, method: :delete %>
 
     <% else %>
