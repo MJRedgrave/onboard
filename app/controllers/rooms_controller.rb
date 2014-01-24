@@ -55,6 +55,6 @@ class RoomsController < ApplicationController
   private
   def room_params
   	# shortcut for white listing form data, this is private so we can say on the form we can update certain fields
-  	params.require(:room).permit(:title, :address, :description, :max_guests, :bedrooms, :price)
+  	params.require(:room).permit(:title, :address, :description, :max_guests, :bedrooms, :price, :image)
   end
 end

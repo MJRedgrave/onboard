@@ -7,6 +7,12 @@ class Room < ActiveRecord::Base
 	geocoded_by :address
 	after_validation :geocode
 
+	# add in paperclip to save images
+	#  the hash after 960x300 means we crop the image
+	# if we want it to be a certain width: "500x"
+	# if we want a certain height: "x500"
+	has_attached_file :image, styles: {large: "960x300#", thumbnail: "50x50x"}
+
 	# vailidations
 	validates :title, presence: true
 	validates :address, presence: true

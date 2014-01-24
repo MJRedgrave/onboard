@@ -26,6 +26,8 @@
       <!-- I am signed up as user number <%= session[:user_id] %> -->
 
     <% if current_user.present? %>
+
+      <%= image_tag current_user.avator:(:thumbnail) %>
       <strong><%= current_user.name %></strong>
 
       <%= link_to "Dashboard", "#" %>
