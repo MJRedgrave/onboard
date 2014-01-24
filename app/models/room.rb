@@ -1,5 +1,8 @@
 class Room < ActiveRecord::Base
 
+	# assicoation
+	belongs_to :user
+
 	# this is from the rubycoder.org site
 	geocoded_by :address
 	after_validation :geocode

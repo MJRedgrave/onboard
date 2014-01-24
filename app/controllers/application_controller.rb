@@ -14,4 +14,14 @@ class ApplicationController < ActionController::Base
 
   #  make the shortcut above availible in our views as well as our controllers
   helper_method :current_user
+
+  # lets add in an action to let anyone logged out go to the signup page
+  def make_sure_logged_in
+    if current_user.nill?
+      flash[:error] = "You need to be signed up"
+      redirect_to new_user_path
+    end
+  end
+
+
 end

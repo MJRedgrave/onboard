@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
 
+	# association
+	has_many :rooms
+
 	# built into rails 4 for handling password
 	has_secure_password
 
